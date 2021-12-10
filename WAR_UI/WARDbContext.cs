@@ -6,7 +6,6 @@ namespace WAR_UI
     {
         public DbSet<Player> Players { get; set; }
         public DbSet<Cards> Cards { get; set; }
-        public DbSet<Game> Games { get; set; }
          
         public WARDbContext(DbContextOptions<WARDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
@@ -15,8 +14,16 @@ namespace WAR_UI
             {
                 p.ToTable("Players");
                 p.HasKey(p => p.Id);
-                p.Property(p => p.Name);
+                p.Property(p => p.Name).IsRequired(true);
                 p.Property(p => p.Wins);
+            });
+            builder.Entity<Cards>(c =>
+            {
+                c.ToTable("Cards");
+                c.HasKey(c => c.Id);
+                c.Property(c => c.Cardnumber).IsRequired(true);
+                c.Property(c => c.Face).IsRequired(true);
+
             });
         }
     }
