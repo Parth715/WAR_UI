@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WAR_UI;
 
@@ -10,9 +11,10 @@ using WAR_UI;
 namespace WAR_UI.Migrations
 {
     [DbContext(typeof(WARDbContext))]
-    partial class WARDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211213183647_updated the tables and controllers")]
+    partial class updatedthetablesandcontrollers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

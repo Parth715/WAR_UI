@@ -27,19 +27,30 @@ namespace WAR_UI.Controllers
         
             return await _context.Cards.ToListAsync();
         }
-        [HttpGet("{playernum}")]
-        public async Task<ActionResult<Cards>> PlayerCard(int num)
+        [HttpGet("playernum")] 
+        public async Task<ActionResult<Cards>> PlayerCard()
         {
+            Random random = new Random();
+            var num = random.Next(52);
             return await _context.Cards.FindAsync(num);
         }
-        [HttpGet("rand")]
-        public async Task<ActionResult<Cards>> GetCard(int playernum)
+        [HttpGet("rand/{playernum}/{player}")]
+        public async Task<ActionResult<Cards>> GetCard(int playernum, int player)
         {
+            var play = await _context.Players.FindAsync(player);
             Random rand = new Random();
-            var number = rand.Next(52);
+            var number = rand.Next(1, 53);
             while (number == playernum)
             {
                 number = rand.Next(52);
+            }
+            if(playernum > number)
+            {
+                play.Wins += 1;
+            }
+            if(playernum < number)
+            {
+                play.Loses += 1;
             }
             return await _context.Cards.FindAsync(number);
             
