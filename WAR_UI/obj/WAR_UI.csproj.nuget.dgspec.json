@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\_______WAR-WEB-APP__________\\WAR_UI\\WAR_UI\\WAR_UI.csproj": {}
+    "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\WAR_UI.csproj": {}
   },
   "projects": {
-    "C:\\repos\\_______WAR-WEB-APP__________\\WAR_UI\\WAR_UI\\WAR_UI.csproj": {
+    "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\WAR_UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\_______WAR-WEB-APP__________\\WAR_UI\\WAR_UI\\WAR_UI.csproj",
+        "projectUniqueName": "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\WAR_UI.csproj",
         "projectName": "WAR_UI",
-        "projectPath": "C:\\repos\\_______WAR-WEB-APP__________\\WAR_UI\\WAR_UI\\WAR_UI.csproj",
-        "packagesPath": "C:\\Users\\max-student\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\_______WAR-WEB-APP__________\\WAR_UI\\WAR_UI\\obj\\",
+        "projectPath": "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\WAR_UI.csproj",
+        "packagesPath": "C:\\Users\\Parth's Laptop\\.nuget\\packages\\",
+        "outputPath": "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\max-student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Parth's Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

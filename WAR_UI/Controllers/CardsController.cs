@@ -31,7 +31,7 @@ namespace WAR_UI.Controllers
         public async Task<ActionResult<Cards>> PlayerCard()
         {
             Random random = new Random();
-            var num = random.Next(52);
+            var num = random.Next(1, 53);
             return await _context.Cards.FindAsync(num);
         }
         [HttpGet("rand/{playernum}/{player}")]
@@ -50,7 +50,7 @@ namespace WAR_UI.Controllers
             }
             if(playernum < number)
             {
-                play.Loses += 1;
+                play.Losses += 1;
             }
             return await _context.Cards.FindAsync(number);
             
