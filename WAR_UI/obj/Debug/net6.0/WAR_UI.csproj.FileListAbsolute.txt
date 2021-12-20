@@ -521,3 +521,4 @@ D:\SOFTWARE DEVELOPER\WAR UI\War Back End\WAR_UI\WAR_UI\obj\Debug\net6.0\staticw
 D:\SOFTWARE DEVELOPER\WAR UI\War Back End\WAR_UI\WAR_UI\obj\Debug\net6.0\scopedcss\bundle\WAR_UI.styles.css
 D:\SOFTWARE DEVELOPER\WAR UI\War Back End\WAR_UI\WAR_UI\obj\Debug\net6.0\WAR_UI.csproj.CopyComplete
 D:\SOFTWARE DEVELOPER\WAR UI\War Back End\WAR_UI\WAR_UI\obj\Debug\net6.0\WAR_UI.genruntimeconfig.cache
+D:\SOFTWARE DEVELOPER\WAR UI\War Back End\WAR_UI\WAR_UI\obj\Debug\net6.0\WAR_UI.csproj.AssemblyReference.cache
