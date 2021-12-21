@@ -20,6 +20,11 @@ namespace WAR_UI.Controllers
             _context = context;
         }
 
+        [HttpGet("blank")]
+        public async Task<ActionResult<Cards>> Blank()
+        {
+            return await _context.Cards.FindAsync(53);
+        }
         // GET: api/Cards
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cards>>> GetCards()
@@ -131,13 +136,6 @@ namespace WAR_UI.Controllers
         private bool CardsExists(int id)
         {
             return _context.Cards.Any(e => e.Id == id);
-        }
-        private List<Cards> Shuffle(List<Cards> cards)
-        {
-            var deck = new List<Cards>();
-            deck = Cards.Deck();
-            deck = Cards.Mix(cards );
-            return deck;
         }
     }
 }
