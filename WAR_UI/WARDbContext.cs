@@ -25,6 +25,7 @@ namespace WAR_UI
                 c.HasKey(c => c.Id);
                 c.Property(c => c.Cardnumber).IsRequired(true);
                 c.Property(c => c.Face).IsRequired(true);
+                c.Property(c => c.Photo);
 
             });
         }

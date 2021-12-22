@@ -7,6 +7,7 @@ namespace WAR_UI
         public int Id { get; set; }
         public int Cardnumber { get; set; }
         public string Face { get; set; }
+        public string Photo { get; set; }
 
         public Cards(int Cardnumber, string Face)
         {
