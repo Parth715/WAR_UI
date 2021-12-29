@@ -24,7 +24,7 @@ namespace WAR_UI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Player>>> GetPlayers()
         {
-            return await _context.Players.ToListAsync();
+            return await _context.Players.Include(x => x.Card).ToListAsync();
         }
 
         // GET: api/Players/5
