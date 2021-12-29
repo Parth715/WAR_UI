@@ -40,9 +40,8 @@ namespace WAR_UI.Controllers
             return await _context.Cards.FindAsync(num);
         }
         [HttpGet("rand/{playernum}/{player}")]
-        public async Task<ActionResult<Cards>> GetCard(int playernum, int player)
+        public async Task<ActionResult<Cards>> GetCard(int playernum)
         {
-            var play = await _context.Players.FindAsync(player);
             Random rand = new Random();
             var number = rand.Next(1, 53);
             while (number == playernum)
