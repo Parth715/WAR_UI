@@ -48,16 +48,9 @@ namespace WAR_UI.Controllers
             var play = await _context.Players.FindAsync(player);
             Random rand = new Random();
             var number = rand.Next(1, 53);
-            var AICARD = await _context.Cards.FindAsync(number);
-            if(play.Card.Cardnumber > AICARD.Cardnumber)
-            {
-                play.Wins += 1;
-            }
-            if(play.Card.Cardnumber < AICARD.Cardnumber)
-            {
-                play.Losses += 1;
-            }
-            return AICARD;
+            return await _context.Cards.FindAsync(number);
+            
+           
         }
         // GET: api/Cards/5
         [HttpGet("{id}")]

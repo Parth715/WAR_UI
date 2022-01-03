@@ -15,8 +15,6 @@ namespace WAR_UI
                 p.ToTable("Players");
                 p.HasKey(p => p.Id);
                 p.Property(p => p.Name).IsRequired(true);
-                p.Property(p => p.Wins);
-                p.Property(p => p.Losses);
                 p.Property(p => p.Outcome);
             });
             builder.Entity<Cards>(c =>
