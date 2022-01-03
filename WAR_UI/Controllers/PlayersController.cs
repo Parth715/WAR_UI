@@ -31,7 +31,7 @@ namespace WAR_UI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Player>> GetPlayer(int id)
         {
-            var player = await _context.Players.FindAsync(id);
+            var player = await _context.Players.Include(x => x.Card).SingleOrDefaultAsync(x => x.Id == id); 
 
             if (player == null)
             {

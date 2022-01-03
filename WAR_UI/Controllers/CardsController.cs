@@ -33,6 +33,8 @@ namespace WAR_UI.Controllers
         
             return await _context.Cards.ToListAsync();
         }
+
+        
         [HttpGet("playernum")] 
         public async Task<ActionResult<Cards>> PlayerCard()
         {
@@ -40,29 +42,22 @@ namespace WAR_UI.Controllers
             var num = random.Next(1, 53);
             return await _context.Cards.FindAsync(num);
         }
-        [HttpGet("rand/{playernum}/{player}")]
-        public async Task<ActionResult<Cards>> GetCard(int playernum, int player)
+        [HttpGet("rand/{player}")]
+        public async Task<ActionResult<Cards>> GetCard( int player)
         {
             var play = await _context.Players.FindAsync(player);
             Random rand = new Random();
             var number = rand.Next(1, 53);
-            while (number == playernum)
-            {
-                number = rand.Next(52);
-            }
-            if(playernum > number)
+            var AICARD = await _context.Cards.FindAsync(number);
+            if(play.Card.Cardnumber > AICARD.Cardnumber)
             {
                 play.Wins += 1;
-                play.Outcome = "You won this round";
             }
-            if(playernum < number)
+            if(play.Card.Cardnumber < AICARD.Cardnumber)
             {
                 play.Losses += 1;
-                play.Outcome = "You lost this round";
             }
-            return await _context.Cards.FindAsync(number);
-            
-           
+            return AICARD;
         }
         // GET: api/Cards/5
         [HttpGet("{id}")]
