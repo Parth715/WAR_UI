@@ -9530,23 +9530,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Parth's Laptop\\.nuget\\packages\\": {},
+    "C:\\Users\\parth\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\WAR_UI.csproj",
+      "projectUniqueName": "C:\\Projects\\WAR\\WAR B\\WAR_UI\\WAR_UI.csproj",
       "projectName": "WAR_UI",
-      "projectPath": "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\WAR_UI.csproj",
-      "packagesPath": "C:\\Users\\Parth's Laptop\\.nuget\\packages\\",
-      "outputPath": "D:\\SOFTWARE DEVELOPER\\WAR UI\\War Back End\\WAR_UI\\WAR_UI\\obj\\",
+      "projectPath": "C:\\Projects\\WAR\\WAR B\\WAR_UI\\WAR_UI.csproj",
+      "packagesPath": "C:\\Users\\parth\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\WAR\\WAR B\\WAR_UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Parth's Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\parth\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
