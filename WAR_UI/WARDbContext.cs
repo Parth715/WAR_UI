@@ -21,7 +21,7 @@ namespace WAR_UI
             {
                 c.ToTable("Cards");
                 c.HasKey(c => c.Id);
-                c.Property(c => c.Cardnumber).IsRequired(true);
+                c.Property(c => c.Number).IsRequired(true);
                 c.Property(c => c.Face).IsRequired(true);
                 c.Property(c => c.Photo);
 

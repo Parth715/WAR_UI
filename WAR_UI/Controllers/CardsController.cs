@@ -42,16 +42,7 @@ namespace WAR_UI.Controllers
             var num = random.Next(1, 53);
             return await _context.Cards.FindAsync(num);
         }
-        [HttpGet("rand/{player}")]
-        public async Task<ActionResult<Cards>> GetCard( int player)
-        {
-            var play = await _context.Players.FindAsync(player);
-            Random rand = new Random();
-            var number = rand.Next(1, 53);
-            return await _context.Cards.FindAsync(number);
-            
-           
-        }
+    
         // GET: api/Cards/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Cards>> GetCards(int id)

@@ -24,7 +24,7 @@ namespace WAR_UI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Player>>> GetPlayers()
         {
-            return await _context.Players.Include(x => x.Card).ToListAsync();
+            return await _context.Players.Include(x => x.Card).Where(x => x.Id < 3).ToListAsync();
         }
 
         // GET: api/Players/5
@@ -73,6 +73,28 @@ namespace WAR_UI.Controllers
             return NoContent();
         }
 
+        [HttpGet("rand")] //get AI and Player card
+        public async Task<ActionResult<Player>> GetCard()
+        {
+            var player = _context.Players.FindAsync(1);
+            var Comp = await _context.Players.SingleOrDefaultAsync(x => x.Name == "AI");
+            Random rand = new Random();
+            var number = rand.Next(1, 53);
+            var card = await _context.Cards.FindAsync(number);
+            await _context.SaveChangesAsync();
+            player.Card = card;
+            number = rand.Next(1, 53);
+            card = await _context.Cards.FindAsync(number);
+            Comp.Card = card;
+            await _context.SaveChangesAsync();
+            var blank = await _context.Cards.FindAsync(53);
+            var blank1 = await _context.Cards.FindAsync(54);
+            blank.Playerid = 3;
+            blank1.Playerid = 3;
+            await _context.SaveChangesAsync();
+            return NoContent();
+
+        }
         // POST: api/Players
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
