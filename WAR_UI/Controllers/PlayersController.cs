@@ -76,7 +76,7 @@ namespace WAR_UI.Controllers
         [HttpGet("rand")] //get AI and Player card
         public async Task<ActionResult<Player>> GetCard()
         {
-            var player = _context.Players.FindAsync(1);
+            var player = await _context.Players.FindAsync(1);
             var Comp = await _context.Players.SingleOrDefaultAsync(x => x.Name == "AI");
             Random rand = new Random();
             var number = rand.Next(1, 53);
@@ -94,6 +94,28 @@ namespace WAR_UI.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
 
+        }
+        [HttpPut("Blank/{player}")]//gets player and assigns blank card so properties are not null on frontend
+        public async Task<ActionResult<Player>> Blank(Player player)
+        {
+            for(var i = 1; i <= 52; i++)
+            {
+                var card = await _context.Cards.FindAsync(i);
+                card.Playerid = 3;
+                await _context.SaveChangesAsync();
+            }
+            var blankcard = await _context.Cards.FindAsync(53);
+            player.Card = blankcard;
+            await _context.SaveChangesAsync();
+            return player;
+        }
+        [HttpPut("Blank1/{AI}")]//gets player and assigns blank card so properties are not null on frontend
+        public async Task<ActionResult<Player>> AIBlank(Player AI)
+        {
+            var blankcard = await _context.Cards.FindAsync(53);
+            AI.Card = blankcard;
+            await _context.SaveChangesAsync();
+            return AI;
         }
         // POST: api/Players
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

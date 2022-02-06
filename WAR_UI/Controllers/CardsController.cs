@@ -20,12 +20,6 @@ namespace WAR_UI.Controllers
             _context = context;
         }
 
-        [HttpGet("blank")]
-        public async Task<ActionResult<Cards>> Blank(Player player)
-        {
-            player.Outcome = "";
-            return await _context.Cards.FindAsync(53);
-        }
         // GET: api/Cards
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cards>>> GetCards()
@@ -56,7 +50,7 @@ namespace WAR_UI.Controllers
 
             return cards;
         }
-
+      
         // PUT: api/Cards/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
